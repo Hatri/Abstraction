@@ -44,6 +44,22 @@ bool PlayGame()
     return GameOverScreen();
 }
 
+void ShowStory()
+{
+    input = 'n';
+
+    cout << "Once upon a time..." << endl;
+    cout << "You thought of a number between 0 and " << difficulty << endl;
+    while (input != 'y')
+    {
+        cout << "Have you got one (y/n)?";
+        cin >> input;
+        if (input != 'y')
+            cout << "Ok... I'll wait until you're ready." << endl;
+    }
+    cout << endl;
+}
+
 //Last section
 int main()
 {
