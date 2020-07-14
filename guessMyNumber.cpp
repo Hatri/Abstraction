@@ -60,6 +60,13 @@ void ShowStory()
     cout << endl;
 }
 
+void ResetGame()
+{
+    lowerBound = 0;
+    upperBound = difficulty + 1;
+    input = 'n';
+}
+
 //Last section
 int main()
 {
