@@ -27,6 +27,23 @@ bool MainMenu()
     }
 }
 
+bool PlayGame()
+{
+    ShowStory();
+
+    ResetGame(); // Reset all variable to original values
+
+    while (input != 'y')
+    { // This is the main game loop
+        UpdateWorld();
+
+        DrawGraphics();
+
+        GetInput();
+    }
+    return GameOverScreen();
+}
+
 //Last section
 int main()
 {
