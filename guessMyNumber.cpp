@@ -87,6 +87,25 @@ void DrawGraphics()
     cout << "y. Yes!" << endl;
 }
 
+void GetInput()
+{
+    cin >> input;
+
+    //Act on the input:
+    switch (input)
+    {
+    case 'l':
+        upperBound = myGuess;
+        break;
+    case 'h':
+        lowerBound = myGuess;
+        break;
+    case 'y':
+        cout << "Well done!" << endl;
+        break;
+    }
+}
+
 //Last section
 int main()
 {
