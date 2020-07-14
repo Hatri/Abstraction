@@ -67,6 +67,18 @@ void ResetGame()
     input = 'n';
 }
 
+bool UpdateWorld()
+{
+    myGuess = (lowerBound + upperBound) / 2; //Generate the next guess
+    if (lastGuess == myGuess)
+    {
+        cout << "Well done!" << endl;
+        return false; // Quits the game
+    }
+    lastGuess = myGuess;
+    return true; // Keeps the game running
+}
+
 //Last section
 int main()
 {
