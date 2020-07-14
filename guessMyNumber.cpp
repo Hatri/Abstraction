@@ -106,6 +106,11 @@ void GetInput()
     }
 }
 
+bool GameOverScreen()
+{
+    // Continue here
+}
+
 //Last section
 int main()
 {
