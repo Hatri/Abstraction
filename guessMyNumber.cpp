@@ -69,14 +69,22 @@ void ResetGame()
 
 bool UpdateWorld()
 {
-    myGuess = (lowerBound + upperBound) / 2; //Generate the next guess
+    myGuess = (lowerBound + upperBound) / 2; //Generate the next guess(Simple AI)
     if (lastGuess == myGuess)
     {
-        cout << "Well done!" << endl;
-        return false; // Quits the game
+        cout << "You're no fun." << endl;
+        return false; // Checks if player is cheating.
     }
     lastGuess = myGuess;
     return true; // Keeps the game running
+}
+
+void DrawGraphics()
+{
+    cout << "I think it's " << myGuess << "! Am I right?" << endl;
+    cout << "l. Lower" << endl;
+    cout << "h. Higher" << endl;
+    cout << "y. Yes!" << endl;
 }
 
 //Last section
