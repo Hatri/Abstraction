@@ -3,7 +3,7 @@
 using namespace std;
 
 int difficulty = 10;
-char input = 'userNumber';
+char input = 'n';
 int lowerBound = 0;              // Lowest possible number left
 int upperBound = difficulty + 1; // Highest possible number left
 int myGuess = 0;
