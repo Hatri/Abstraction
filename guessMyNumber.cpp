@@ -108,7 +108,14 @@ void GetInput()
 
 bool GameOverScreen()
 {
-    // Continue here
+    cout << endl;
+    cout << "That was pretty good, play again (y/n)?" << endl;
+    cin >> input;
+
+    if (input == 'y')
+        return true;
+    else
+        return false;
 }
 
 //Last section
