@@ -27,23 +27,6 @@ bool MainMenu()
     }
 }
 
-bool PlayGame()
-{
-    ShowStory();
-
-    ResetGame(); // Reset all variable to original values
-
-    while (input != 'y')
-    { // This is the main game loop
-        UpdateWorld();
-
-        DrawGraphics();
-
-        GetInput();
-    }
-    return GameOverScreen();
-}
-
 void ShowStory()
 {
     input = 'n';
@@ -116,6 +99,23 @@ bool GameOverScreen()
         return true;
     else
         return false;
+}
+
+bool PlayGame()
+{
+    ShowStory();
+
+    ResetGame(); // Reset all variable to original values
+
+    while (input != 'y')
+    { // This is the main game loop
+        UpdateWorld();
+
+        DrawGraphics();
+
+        GetInput();
+    }
+    return GameOverScreen();
 }
 
 //Last section
