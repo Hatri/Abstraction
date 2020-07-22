@@ -9,4 +9,9 @@ public class SetupTeardownIncluder {
     private WikiPage testPage;
     private StringBuffer newPageContent;
     private PageCrawler pageCrawler;
+
+    public static String render(PageData pageData) throws Exception {
+        return render(pageData, false);
+    }
+
 }
