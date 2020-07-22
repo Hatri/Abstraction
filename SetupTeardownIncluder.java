@@ -67,4 +67,16 @@ public class SetupTeardownIncluder {
             includeSuiteTeardownPage();
     }
 
+    private void includeTeardownPage() throws Exception {
+        include("TearDown", "-teardown");
+    }
+
+    private void includeSuiteTeardownPage() throws Exception {
+        include(SuiteResponder.SUITE_TEARDOWN_NAME, "-teardown");
+    }
+
+    private void updatePageContent() throws Exception {
+        pageData.setContent(newPageContent.toString());
+    }
+
 }
