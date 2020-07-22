@@ -18,4 +18,11 @@ public class SetupTeardownIncluder {
         return new SetupTeardownIncluder(pageData).render(isSuite);
     }
 
+    private SetupTeardownIncluder(PageData pageData) {
+        this.pageData = pageData;
+        testPage = pageData.getWikiPage();
+        pageCrawler = testPage.getPageCrawler();
+        newPageContent = new StringBuffer();
+    }
+
 }
