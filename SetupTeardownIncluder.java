@@ -87,4 +87,13 @@ public class SetupTeardownIncluder {
         }
     }
 
+    private WikiPage findInheritedPage(String pageName) throws Exception {
+        return PageCrawlerImpl.getInheritedPage(pageName, testPage);
+    }
+
+    private String getPathNameForPage(WikiPage page) throws Exception {
+        WikiPagePath pagePath = pageCrawler.getFullPath(page);
+        return PathParser.render(pagePath);
+    }
+
 }
