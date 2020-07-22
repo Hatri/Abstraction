@@ -43,4 +43,10 @@ public class SetupTeardownIncluder {
         updatePageContent();
     }
 
+    private void includePageContent() throws Exception {
+        if (isSuite)
+            includeSuiteSetupPage();
+        includeSetupPage();
+    }
+
 }
