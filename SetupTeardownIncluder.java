@@ -57,4 +57,14 @@ public class SetupTeardownIncluder {
         include("Setup", "-setup");
     }
 
+    private void includePageContent() throws Exception {
+        newPageContent.append(pageData.getContent());
+    }
+
+    private void includeTeardownPages() throws Exception {
+        includeTeardownPage();
+        if (isSuite)
+            includeSuiteTeardownPage();
+    }
+
 }
