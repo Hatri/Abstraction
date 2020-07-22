@@ -79,4 +79,12 @@ public class SetupTeardownIncluder {
         pageData.setContent(newPageContent.toString());
     }
 
+    private void include(String pageName, String arg) throws Exception {
+        WikiPage inheritedPage = findInheritedPage(pageName);
+        if (inheritedPage != null) {
+            String pagePathName = getPathNameForPage(inheritedPage);
+            buildingIncludeDirective(pagePathName, arg);
+        }
+    }
+
 }
