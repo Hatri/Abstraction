@@ -25,4 +25,15 @@ public class SetupTeardownIncluder {
         newPageContent = new StringBuffer();
     }
 
+    private String render(boolean isSuite) throws Exception {
+        this.isSuite = isSuite;
+        if (isTestPage())
+            includeSetupAndTeardownPages();
+        return pageData.getHtml();
+    }
+
+    private boolean isTestPage() throws Exception {
+        return pageData.hasAttribute("Test");
+    }
+
 }
