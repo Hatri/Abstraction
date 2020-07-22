@@ -49,4 +49,12 @@ public class SetupTeardownIncluder {
         includeSetupPage();
     }
 
+    private void includeSuiteSetupPage() throws Exception {
+        include(SuiteResponder.SUITE_SETUP_NAME, "-setup");
+    }
+
+    private void includeSetupPage() throws Exception {
+        include("Setup", "-setup");
+    }
+
 }
