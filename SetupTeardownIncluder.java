@@ -96,4 +96,8 @@ public class SetupTeardownIncluder {
         return PathParser.render(pagePath);
     }
 
+    private void buildingIncludeDirective(String pagePathName, String arg) {
+        newPageContent.append("\n!include ").append(arg).append(" .").append(pagePathName).append("\n");
+    }
+
 }
