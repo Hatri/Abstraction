@@ -14,4 +14,8 @@ public class SetupTeardownIncluder {
         return render(pageData, false);
     }
 
+    public static String render(PageData pageData, boolean isSuite) throws Exception {
+        return new SetupTeardownIncluder(pageData).render(isSuite);
+    }
+
 }
