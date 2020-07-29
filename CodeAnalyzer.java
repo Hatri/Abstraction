@@ -41,4 +41,11 @@ public class CodeAnalyzer {
         recordWidestLine(lineSize);
     }
 
+    private recordWidestLine(int lineSize){
+        if (lineSize > maxLineWidth) {
+            maxLineWidth = lineSize;
+            widestLineNumber = lineCount;
+        }
+    }
+
 }
