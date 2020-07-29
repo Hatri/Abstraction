@@ -8,4 +8,10 @@ public class CodeAnalyzer {
     public CodeAnalyzer() {
         lineWidthHistogram = new LineWidthHistogram();
     }
+
+    public static List<File> findJavaFiles(File parentDirectory) {
+        List<File> files = new ArrayList<File>();
+        findJavaFiles(parentDirectory, files);
+        return files;
+    }
 }
