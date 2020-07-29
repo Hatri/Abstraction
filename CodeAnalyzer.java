@@ -78,4 +78,8 @@ public class CodeAnalyzer {
         }
         throw new Error("Cannot get here");
     }
+
+    private int lineCountForWidth(int width) {
+        return lineWidthHistogram.getLinesForWidth(width).size();
+    }
 }
