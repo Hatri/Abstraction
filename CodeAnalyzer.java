@@ -1,3 +1,5 @@
+import java.io.BufferedReader;
+
 public class CodeAnalyzer {
     private int lineCount;
     private int maxLineWidth;
@@ -23,4 +25,20 @@ public class CodeAnalyzer {
                 findJavaFiles(file, files);
         }
     }
+
+    public void analyzeFile(File javaFile) throws {
+        BufferedReader br = new BufferedReader(new FileReader(javaFile));
+        String line;
+        while ((line = br.readLine()) != null)
+            measureLine(line);
+    }
+
+    private void measureLine(String line) {
+        lineCount++;
+        int lineSize = line.length();
+        totalChars += lineSize;
+        lineWidthHistogram.addLine(lineSize, lineCount);
+        recordWidestLine(lineSize);
+    }
+
 }
