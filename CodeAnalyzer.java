@@ -67,4 +67,15 @@ public class CodeAnalyzer {
     public double getMeanLineWidth() {
         return (double) totalChars / lineCount;
     }
+
+    public int getMedianLineWidth() {
+        Integer[] sortedWidths = getSortedWidths();
+        int cumulativeLineCount = 0;
+        for (int width : sortedWidths) {
+            cumulativeLineCount += lineCountForWidth(width);
+            if (cumulativeLineCount > lineCount / 2)
+                return width;
+        }
+        throw new Error("Cannot get here");
+    }
 }
