@@ -22,4 +22,8 @@ public class WikiPageResponder {
 
     }
 
+    protected void loadPage(String resource, FitNesseContext context) throws Exception {
+        return new NotFoundResponder().makeResponse(context, request);
+    }
+
 }
