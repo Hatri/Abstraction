@@ -14,4 +14,13 @@ public class CodeAnalyzer {
         findJavaFiles(parentDirectory, files);
         return files;
     }
+
+    private static void findJavaFiles(File parentDirectory, List<File> files){
+        for (File file : parentDirectory.listFiles()) {
+            if (file.getName().endsWith(".java"))
+                files.add(file)
+            else if (file.isDirectory())
+                findJavaFiles(file, files);
+        }
+    }
 }
