@@ -82,4 +82,11 @@ public class CodeAnalyzer {
     private int lineCountForWidth(int width) {
         return lineWidthHistogram.getLinesForWidth(width).size();
     }
+
+    private Integer[] getSortedWidths() {
+        Set<Integer> widths = lineWidthsHistogram.getWidths();
+        Integer[] sortedWidths = (widths.toArray(new Integer[0]));
+        Arrays.sort(sortedWidths);
+        return sortedWidths;
+    }
 }
