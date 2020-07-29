@@ -26,4 +26,11 @@ public class WikiPageResponder {
         return new NotFoundResponder().makeResponse(context, request);
     }
 
+    private SimpleResponse makePageResponse(FitnesseContext context) throws Exception {
+        pageTitle = PathParser.render(crawler.getFullPath(page));
+        response.setMaxAge(0);
+        response.setContent(html);
+        return response;
+    }
+
 }
