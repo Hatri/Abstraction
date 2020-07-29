@@ -14,4 +14,12 @@ public class WikiPageResponder {
             return makePageResponse(context);
     }
 
+    private String getPageNameOrDefault(Request request, String defaultPageName) {
+        String pageName = request.getResources();
+        if (StringUtil.isBlank(pageName))
+            pageName = defaultPageName;
+        return pageName;
+
+    }
+
 }
