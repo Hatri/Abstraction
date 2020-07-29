@@ -48,4 +48,23 @@ public class CodeAnalyzer {
         }
     }
 
+    public int getLineCount() {
+        return lineCount;
+    }
+
+    public int getMaxLineWidth() {
+        return maxLineWidth;
+    }
+
+    public int getWidestLineNumber() {
+        return widestLineNumber;
+    }
+
+    public LineWidthHistogram getLineWidthHistogram() {
+        return lineWidthHistogram;
+    }
+
+    public double getMeanLineWidth() {
+        return (double) totalChars / lineCount;
+    }
 }
