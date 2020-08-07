@@ -24,4 +24,21 @@ public class Bank implements java.io.Serializable {
 
     @OneToMany(cascade = CascadeType.All, fetch = FetchType.EAGER, mappedBy = "bank")
     private Collection<Account> accounts = new ArrayList<Account>();
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public voic addAccount(Account account) {
+        account.setBank(this);
+        accounts.add(account);
+    }
+
+    public Collection<Account> getAccoutns() {
+        return accounts;
+    }
 }
