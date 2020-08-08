@@ -33,7 +33,7 @@ public class Bank implements java.io.Serializable {
         this.id = id;
     }
 
-    public voic addAccount(Account account) {
+    public void addAccount(Account account) {
         account.setBank(this);
         accounts.add(account);
     }
