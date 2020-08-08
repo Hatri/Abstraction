@@ -41,4 +41,8 @@ public class Bank implements java.io.Serializable {
     public Collection<Account> getAccoutns() {
         return accounts;
     }
+
+    public void setAccounts(Collection<Account> accounts) {
+        this.accounts = accounts;
+    }
 }
